@@ -62,7 +62,10 @@ def command_parser(raw_str: str):
         elif " ".join(element[:2]).lower() in value:
             return key, element[2:]
 
-    return "Unknown command, please, input applicable command"
+    return (
+        None,
+        "Unknown command, please, input applicable command",
+    )
 
 
 COMMANDR_1 = {
